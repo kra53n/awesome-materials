@@ -1,7 +1,8 @@
 -
   name: Пример
-  price: 0
+  recommended: false
   why:
   where:
-  when: 04.07.2024
+  price: 0
   duration:
+  reference:
