@@ -1,8 +1,16 @@
 -
-  name: Пример
-  recommended: false
+  name: Архитектура компьютера, Таненбаум Э. С., Остин Т.
+  recommended: true
   why:
-  where:
-  price: 0
+  where: https://www.youtube.com/live/woD2XbcBZw8?si=dzeOeBCKn4bj9sMQ&t=2823
+  price:
   duration:
   reference:
+-
+  name: Ben Eater
+  recommended: true
+  why:
+  where: https://www.youtube.com/live/woD2XbcBZw8?si=w0mOXnTjbLFJJEuN&t=2829
+  price:
+  duration:
+  reference: https://www.youtube.com/BenEater
