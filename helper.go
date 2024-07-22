@@ -9,10 +9,18 @@ import (
 func main() {
 	m, err := ParseYaml("materials.yaml")
 	if err != nil {
-		fmt.Println("error:", err)
+		fmt.Println(err)
+		return
 	}
-	for _, r := range FindRepetitions(m) {
-		fmt.Println(r)
+	repititions := FindRepetitions(m)
+	if len(repititions) > 0 {
+		for _, r := range repititions {
+			fmt.Println(r)
+		}
+		return
+	}
+	if err := CreateCsvTable("materials.csv", "\t", m); err != nil {
+		fmt.Println(err)
 	}
 }
 
@@ -37,11 +45,8 @@ func ParseYaml(filename string) ([]Material, error) {
 	lines := strings.Split(string(data), "\r\n")
 	var materials []Material
 	var m *Material
-	_ = m
 	for i, line := range lines {
 		t, k, v := parseYamlLine(line)
-		_ = k
-		_ = v
 		switch t {
 		case YamlUnrecognized:
 			continue
@@ -127,4 +132,38 @@ func FindRepetitions(m []Material) []string {
 		}
 	}
 	return r
+}
+
+func CreateCsvTable(filename string, delimiter string, materials []Material) error {
+	if len(materials) == 0 {
+		return nil
+	}
+	d := strings.Join([]string{
+		"Название",
+		"Рекомендовано",
+		"Причина",
+		"Цена",
+		"Продолжительность",
+		"Ссылка",
+		"Где рекомендовано",
+	}, delimiter) + "\n"
+	for _, m := range materials {
+		recommended := "Нет"
+		if m.Recommended {
+			recommended = "Да"
+		}
+		d += strings.Join([]string{
+				m.Name,
+				recommended,
+				m.Why,
+				m.Price,
+				m.Duration,
+				m.Reference,
+				m.Where,
+			}, delimiter) + "\n"
+	}
+	if err := os.WriteFile(filename, []byte(d), 0666); err != nil {
+		return err
+	}
+	return nil
 }
