@@ -14,3 +14,19 @@
   price:
   duration:
   reference: https://www.youtube.com/BenEater
+-
+  name: CS50
+  recommended: true
+  why:
+  where:
+  price:
+  duration:
+  reference: https://cs50.harvard.edu/x/2024/
+-
+  name: The Go Programming Language, Alan A. A. Donovan, Brian W. Kernighan
+  recommended: true
+  why:
+  where:
+  price:
+  duration:
+  reference: http://www.cs.uniroma2.it/upload/2017/TSC/The%20Go%20Programming%20Language.pdf
