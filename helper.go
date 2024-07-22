@@ -19,7 +19,7 @@ func main() {
 		}
 		return
 	}
-	if err := CreateCsvTable("materials.csv", "\t", m); err != nil {
+	if err := WriteCsv("materials.csv", "\t", m); err != nil {
 		fmt.Println(err)
 	}
 }
@@ -134,7 +134,7 @@ func FindRepetitions(m []Material) []string {
 	return r
 }
 
-func CreateCsvTable(filename string, delimiter string, materials []Material) error {
+func WriteCsv(filename string, delimiter string, materials []Material) error {
 	if len(materials) == 0 {
 		return nil
 	}
