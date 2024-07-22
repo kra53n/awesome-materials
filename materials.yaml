@@ -6,3 +6,11 @@
   price: 0
   duration:
   reference:
+-
+  name: Пример
+  recommended: false
+  why:
+  where:
+  price: 0
+  duration:
+  reference:
