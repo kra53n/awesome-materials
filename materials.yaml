@@ -38,3 +38,11 @@
   price:
   duration:
   reference: https://docs.yandex.ru/docs/view?tm=1721899831&tld=ru&lang=ru&name=algoritmicheskie_tryuki_dlya_programmistov_3643709.pdf&text=hackers%20delight&url=https%3A%2F%2Fbooks.4nmv.ru%2Fbooks%2Falgoritmicheskie_tryuki_dlya_programmistov_3643709.pdf&lr=23&mime=pdf&l10n=ru&type=touch&sign=99023f661d761df3414600bd09288ea1&keyno=0&nosw=1&serpParams=tm%3D1721899831%26tld%3Dru%26lang%3Dru%26name%3Dalgoritmicheskie_tryuki_dlya_programmistov_3643709.pdf%26text%3Dhackers%2Bdelight%26url%3Dhttps%253A%2F%2Fbooks.4nmv.ru%2Fbooks%2Falgoritmicheskie_tryuki_dlya_programmistov_3643709.pdf%26lr%3D23%26mime%3Dpdf%26l10n%3Dru%26type%3Dtouch%26sign%3D99023f661d761df3414600bd09288ea1%26keyno%3D0%26nosw%3D1
+-
+  name: Искусственный интеллект. Современные подход, Стюарт Рассел, Питер Норвиг
+  recommended: true
+  why: Базовая книга по искусственному интеллекту, материалы которой препадаются в университетах (на русском рекомендуется читать 2 издание, так как переводы дальнейших изданий выполнены плохо)
+  where:
+  price:
+  duration:
+  reference:
